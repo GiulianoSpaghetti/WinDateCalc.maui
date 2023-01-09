@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WInDateCalc.maui.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image
+        x:Name="backgroundImage"
+        Source="background.png"
+        Aspect="AspectFill"
+        HorizontalOptions="Start"/>
+        <Label Text="Inserisci la data" x:Name="ldate"  Grid.Column="0" Grid.Row="0" />
+        <DatePicker x:Name="data" Grid.Row="0" Grid.Column="1" />
+        <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="1" Grid.Column="1" />
+        <Button Text="Informazioni" Clicked="info_Click" Grid.Row="1" Grid.Column="0" />
+        <Label x:Name="risultato" Text=""  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+    </Grid>
+</ContentPage>
