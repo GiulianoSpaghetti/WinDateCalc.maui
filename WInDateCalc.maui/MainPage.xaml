@@ -15,13 +15,13 @@
         </Grid.ColumnDefinitions>
         <Image
         x:Name="backgroundImage"
-        Source="background.png"
+        Source="background.jpg"
         Aspect="AspectFill"
-        HorizontalOptions="Start"/>
+        HorizontalOptions="Start" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
         <Label Text="Inserisci la data" x:Name="ldate"  Grid.Column="0" Grid.Row="0" />
         <DatePicker x:Name="data" Grid.Row="0" Grid.Column="1" />
-        <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="1" Grid.Column="1" />
-        <Button Text="Informazioni" Clicked="info_Click" Grid.Row="1" Grid.Column="0" />
-        <Label x:Name="risultato" Text=""  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="1" Grid.Column="1" Opacity="0.5" />
+        <Button Text="Informazioni" Clicked="info_Click" Grid.Row="1" Grid.Column="0" Opacity="0.5" />
+        <Label x:Name="risultato" Text=""  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" />
     </Grid>
 </ContentPage>

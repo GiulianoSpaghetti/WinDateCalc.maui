@@ -1,11 +1,15 @@
-﻿namespace WInDateCalc.maui;
+﻿using System.Net.NetworkInformation;
+using Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;
+using Application = Microsoft.Maui.Controls.Application;
 
+namespace WInDateCalc.maui;
 public partial class MainPage : ContentPage
 {
     int count = 0;
 
     public MainPage()
     {
+        String s;
         InitializeComponent();
         while (true)
             try
