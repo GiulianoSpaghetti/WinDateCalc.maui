@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WInDateCalc.maui.InfoPage"
-             Title="InfoPage">
+             Title="Informazioni">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -15,16 +16,16 @@
         </Grid.ColumnDefinitions>
         <Image
         x:Name="backgroundImage"
-        Source="background.jpg"
+        Source="background"
         Aspect="AspectFill"
-        HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" />
+        HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" />
 
-        <Label Text="Informazioni" FontSize="Title" Grid.Row="0"/>
-        <Label Text="Autore: Giulio Sorrentino" Grid.Row="1"/>
-        <Label Text="Licenza: GPL v3 o, secondo la tua opinione, qualsiasi versione successiva." Grid.Row="2" TextColor="White"/>
+        <Label Text="ⓒ Giulio Sorrentino 2023" Grid.Row="1" TextColor="White"/>
+        <Label Text="Un semplice countdown in MAUI" Grid.Row="2" TextColor="White"/>
+        <Label Text="Licenza: GPL v3 o, secondo la tua opinione, qualsiasi versione successiva." Grid.Row="3" TextColor="White"/>
         <Button Margin="0,10,0,0" Text="Learn more"
                        Clicked="OnSito_Click"
                         BackgroundColor="{StaticResource Primary}"
-                        Grid.Row="3"/>
+                        Grid.Row="4"/>
     </Grid>
 </ContentPage>

@@ -1,0 +1,12 @@
+<resources>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+	<string name="insert_the_date">Datum einfügen</string>
+	<string name="calculate">Berechnen</string>
+	<string name="invalid_lvalue">Ungültiger Wert</string>
+	<string name="informations">Information</string>
+	<string name="there_are">Noch</string>
+	<string name="days_left">Tage</string>
+</resources>
