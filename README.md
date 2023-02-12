@@ -3,7 +3,7 @@ Un countdown in maui
 
 # Gameplay
 
-[![youtube]https://i.ibb.co/FxyQZbS/mq3.jpg)](https://youtu.be/TRMzgGaFKFk)
+[![youtube](https://i.ibb.co/FxyQZbS/mq3.jpg)](https://youtu.be/TRMzgGaFKFk)
 
 # Come installare
 
