@@ -21,7 +21,6 @@
         <Label Text="" x:Name="ldate"  Grid.Column="0" Grid.Row="0"  TextColor="White" />
         <DatePicker x:Name="data" Grid.Row="0" Grid.Column="1"  TextColor="White" />
         <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="1" Grid.Column="1" Opacity="0.5" />
-        <Button x:Name="binfo" Text="Informazioni" Clicked="info_Click" Grid.Row="1" Grid.Column="0" Opacity="0.5" />
         <Label x:Name="risultato" Text=""  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" />
     </Grid>
 </ContentPage>

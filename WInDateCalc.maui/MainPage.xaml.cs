@@ -15,10 +15,9 @@ public partial class MainPage : ContentPage
                 Preferences.Clear();
             }
 #if ANDROID
-        ldate.Text = GetResource(WinDateCalc.maui.Resource.String.insert_the_date);
-        bok.Text=GetResource(WinDateCalc.maui.Resource.String.calculate);
-        binfo.Text=GetResource(WinDateCalc.maui.Resource.String.informations);
-#elif NET7_0_OR_GREATER
+        Title=App.GetResource(WinDateCalc.maui.Resource.String.application);
+        ldate.Text = App.GetResource(WinDateCalc.maui.Resource.String.insert_the_date);
+        bok.Text=App.GetResource(WinDateCalc.maui.Resource.String.calculate);
 #endif
     }
 
@@ -33,14 +32,12 @@ public partial class MainPage : ContentPage
         TimeSpan differenza = data.Date - d;
         if (differenza.TotalMilliseconds < 0) {
 #if ANDROID
-            risultato.Text = GetResource(WinDateCalc.maui.Resource.String.invalid_lvalue);
-#elif NET7_0_OR_GREATER
+            risultato.Text = App.GetResource(WinDateCalc.maui.Resource.String.invalid_lvalue);
 #endif
             return;
         }
 #if ANDROID
-    risultato.Text = $"{GetResource(WinDateCalc.maui.Resource.String.there_are)} {Math.Ceiling(differenza.TotalDays)} {GetResource(WinDateCalc.maui.Resource.String.days_left)}.";
-#elif NET7_0_OR_GREATER
+    risultato.Text = $"{App.GetResource(WinDateCalc.maui.Resource.String.there_are)} {Math.Ceiling(differenza.TotalDays)} {App.GetResource(WinDateCalc.maui.Resource.String.days_left)}.";
 #endif
         Preferences.Set("Data", data.Date.ToString());
     }
@@ -50,17 +47,5 @@ public partial class MainPage : ContentPage
         await Navigation.PushAsync(new InfoPage());
     }
 
-#if ANDROID
-    private System.String GetResource(int id)
-    {
-        return Android.App.Application.Context.Resources.GetString(id);
-
-    }
-#elif NET7_0_OR_GREATER
-    private System.String GetResource(string id)
-    {
-        return Resources[id].ToString();
-    }
-#endif
 }
 
