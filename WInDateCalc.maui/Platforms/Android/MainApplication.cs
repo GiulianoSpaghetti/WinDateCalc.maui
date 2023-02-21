@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace WInDateCalc.maui;
+namespace WinDateCalc.maui;
 
 [Application]
 public class MainApplication : MauiApplication

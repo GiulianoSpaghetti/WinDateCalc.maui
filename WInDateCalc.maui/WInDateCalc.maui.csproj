@@ -11,7 +11,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>WInDateCalc.maui</ApplicationTitle>
+		<ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.windatecalc.maui</ApplicationId>
@@ -86,15 +86,15 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <ApplicationDisplayVersion>1.1</ApplicationDisplayVersion>
-	  <ApplicationVersion>3</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
+	  <ApplicationVersion>4</ApplicationVersion>
 	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
 	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <ApplicationDisplayVersion>1.1</ApplicationDisplayVersion>
-	  <ApplicationVersion>3</ApplicationVersion>
+	  <ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
+	  <ApplicationVersion>4</ApplicationVersion>
 	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
 	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
 	</PropertyGroup>

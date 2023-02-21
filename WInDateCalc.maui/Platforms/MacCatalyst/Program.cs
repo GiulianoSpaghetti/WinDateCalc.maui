@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace WInDateCalc.maui;
+namespace WinDateCalc.maui;
 
 public class Program
 {

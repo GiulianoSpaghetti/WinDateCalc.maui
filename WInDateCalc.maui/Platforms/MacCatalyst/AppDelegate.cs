@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace WInDateCalc.maui;
+namespace WinDateCalc.maui;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

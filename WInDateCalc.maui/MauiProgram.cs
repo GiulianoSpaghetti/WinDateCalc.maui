@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace WInDateCalc.maui;
+namespace WinDateCalc.maui;
 
 public static class MauiProgram
 {

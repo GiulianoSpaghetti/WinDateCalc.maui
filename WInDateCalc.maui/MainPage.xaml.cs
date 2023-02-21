@@ -1,4 +1,4 @@
-﻿namespace WInDateCalc.maui;
+﻿namespace WinDateCalc.maui;
 public partial class MainPage : ContentPage
 {
     public MainPage()
