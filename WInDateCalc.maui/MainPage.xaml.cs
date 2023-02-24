@@ -18,6 +18,10 @@ public partial class MainPage : ContentPage
         Title=App.GetResource(WinDateCalc.maui.Resource.String.application);
         ldate.Text = App.GetResource(WinDateCalc.maui.Resource.String.insert_the_date);
         bok.Text=App.GetResource(WinDateCalc.maui.Resource.String.calculate);
+#else
+        Title="Application";
+        ldate.Text="Insert the date";
+        bok.Text="Calculate";
 #endif
     }
 
@@ -33,11 +37,15 @@ public partial class MainPage : ContentPage
         if (differenza.TotalMilliseconds < 0) {
 #if ANDROID
             risultato.Text = App.GetResource(WinDateCalc.maui.Resource.String.invalid_lvalue);
+#else
+            risultato.Text="Invalid lvalue";
 #endif
             return;
         }
 #if ANDROID
     risultato.Text = $"{App.GetResource(WinDateCalc.maui.Resource.String.there_are)} {Math.Ceiling(differenza.TotalDays)} {App.GetResource(WinDateCalc.maui.Resource.String.days_left)}.";
+#else
+    risultato.Text= $"There are {Math.Ceiling(differenza.TotalDays)} days left.";
 #endif
         Preferences.Set("Data", data.Date.ToString());
     }

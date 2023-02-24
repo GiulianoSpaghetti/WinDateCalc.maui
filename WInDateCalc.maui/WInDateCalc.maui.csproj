@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android33.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -15,7 +15,7 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.windatecalc.maui</ApplicationId>
-		<ApplicationIdGuid>295baa56-71cd-4e08-b502-fd4599097fbc</ApplicationIdGuid>
+		<ApplicationIdGuid>60e42080-9d10-492c-a471-e7997ab2e1b2</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -29,74 +29,8 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-maccatalyst|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-windows10.0.19041.0|AnyCPU'">
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
-	  <ApplicationVersion>2</ApplicationVersion>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
-	  <ApplicationVersion>4</ApplicationVersion>
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <ApplicationDisplayVersion>1.2</ApplicationDisplayVersion>
-	  <ApplicationVersion>4</ApplicationVersion>
-	  <ApplicationId>org.altervista.numerone.windatecalc.maui</ApplicationId>
-	  <ApplicationTitle>WinDateCalc.maui</ApplicationTitle>
+	<PropertyGroup>
+	  <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.22621.0</TargetFrameworks>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -108,6 +42,7 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -117,23 +52,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\Background.jpg" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="InfoPage.xaml.cs">
-	    <DependentUpon>InfoPage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="InfoPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
-
+<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(Configuration)' == 'Release'">
+    <AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>803E3EFD02BBC15217800954CB90D04B465C8468</PackageCertificateThumbprint>
+</PropertyGroup>
+<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows' and '$(RuntimeIdentifierOverride)' != ''">
+    <RuntimeIdentifier>$(RuntimeIdentifierOverride)</RuntimeIdentifier>
+</PropertyGroup>
 </Project>

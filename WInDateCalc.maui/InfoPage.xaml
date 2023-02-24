@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <Image
         x:Name="backgroundImage"
-        Source="background"
+        Source="background.jpg"
         Aspect="AspectFill"
         HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" />
 
