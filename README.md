@@ -13,6 +13,8 @@ Un countdown in maui
 
 https://learn.microsoft.com/en-us/answers/questions/1140999/how-can-i-access-calendar-and-reminder-items-on-ne
 
+https://developer.android.com/guide/topics/providers/calendar-provider#manifest
+
 
 # Donazioni
 
