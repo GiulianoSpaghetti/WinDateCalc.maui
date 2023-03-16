@@ -9,6 +9,11 @@ Un countdown in maui
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.windatecalc.maui&hl=it)
 
+# Bibliografia
+
+https://learn.microsoft.com/en-us/answers/questions/1140999/how-can-i-access-calendar-and-reminder-items-on-ne
+
+
 # Donazioni
 
 [![paypal](https://www.paypalobjects.com/it_IT/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H4ZHTFRCETWXG)
