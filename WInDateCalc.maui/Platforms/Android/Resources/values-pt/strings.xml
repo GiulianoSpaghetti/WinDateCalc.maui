@@ -10,4 +10,13 @@
 	<string name="invalid_lvalue">Valor inválido</string>
 	<string name="there_are"></string>
 	<string name="days_left">dias para ir</string>
+	<string name="invalid_id">ID inválido</string>
+	<string name="invalid_description">Descrição inválida</string>
+	<string name="invalid_title">Título inválido</string>
+	<string name="inserted_into_calendar">Inserido no calendário</string>
+	<string name="calendar_error">Erro ao inserir. Provavelmente o aplicativo está sem acesso de gravação</string>
+	<string name="lblid">ID: </string>
+	<string name="lblname">Nome: </string>
+	<string name="lbldescription">Descrição: </string>
+	<string name="btncalendar">Inserir no calendário</string>
 </resources>

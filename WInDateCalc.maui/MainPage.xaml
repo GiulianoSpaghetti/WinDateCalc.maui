@@ -2,25 +2,46 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WinDateCalc.maui.MainPage">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Image
-        x:Name="backgroundImage"
-        Source="background.jpg"
-        Aspect="AspectFill"
-        HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
-        <Label Text="" x:Name="ldate"  Grid.Column="0" Grid.Row="0"  TextColor="White" />
-        <DatePicker x:Name="data" Grid.Row="0" Grid.Column="1"  TextColor="White" />
-        <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="1" Grid.Column="1" Opacity="0.5" />
-        <Label x:Name="risultato" Text=""  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" />
-    </Grid>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+            x:Name="backgroundImage"
+            Source="background.jpg"
+            Aspect="AspectFill"
+            HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" Grid.ColumnSpan="2"/>
+            <Label Text="id" x:Name="lblid" Grid.Column="0" Grid.Row="0" />
+            <Entry Text="" x:Name="eid" Grid.Column="1" Grid.Row="0" />
+            <Label Text="Nome" x:Name="lblnome" Grid.Column="0" Grid.Row="1" />
+            <Entry x:Name="enome" Grid.Column="1" Grid.Row="1" Text="" />
+            <Label Text="Descrizione" x:Name="lbldescrizione" Grid.Column="0" Grid.Row="2" />
+            <Entry x:Name="edescrizione" Grid.Column="1" Grid.Row="2" Text="" />
+            <Label Text="" x:Name="ldate"  Grid.Column="0" Grid.Row="3" />
+            <DatePicker x:Name="data" Grid.Row="3" Grid.Column="1"  TextColor="White" />
+            <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="4" Grid.Column="1" Opacity="0.5" />
+            <Button Text="Inserisci nel calendario" x:Name="btnCalendar" IsVisible="false" Clicked="OnCalendar_Click" Grid.Row="4" Grid.Column="0" Opacity ="0.5" />
+            <Label x:Name="risultato" Text=""  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

@@ -18,10 +18,20 @@ public partial class MainPage : ContentPage
         Title=App.GetResource(WinDateCalc.maui.Resource.String.application);
         ldate.Text = App.GetResource(WinDateCalc.maui.Resource.String.insert_the_date);
         bok.Text=App.GetResource(WinDateCalc.maui.Resource.String.calculate);
+        lblid.Text = App.GetResource(WinDateCalc.maui.Resource.String.lblid);
+        lblnome.Text=App.GetResource(WinDateCalc.maui.Resource.String.lblname);
+        lbldescrizione.Text=App.GetResource(WinDateCalc.maui.Resource.String.lbldescription);
+        btnCalendar.Text=App.GetResource(WinDateCalc.maui.Resource.String.btncalendar);
+        btnCalendar.IsVisible = true;
+        btnCalendar.IsEnabled = false;
 #else
-        Title="Application";
+        Title = "Application";
         ldate.Text="Insert the date";
         bok.Text="Calculate";
+        lblid.Text = "Id: ";
+        lblnome.Text = "Name: ";
+        lbldescrizione.Text = "Description: ";
+        btnCalendar.IsVisible = false;
 #endif
     }
 
@@ -48,11 +58,39 @@ public partial class MainPage : ContentPage
     risultato.Text= $"There are {Math.Ceiling(differenza.TotalDays)} days left.";
 #endif
         Preferences.Set("Data", data.Date.ToString());
+        btnCalendar.IsEnabled = true;
     }
 
     private async void info_Click(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new InfoPage());
+    }
+
+    private void OnCalendar_Click(object sender, EventArgs e)
+    {
+#if ANDROID 
+            risultato.Text="";
+            int id;
+            btnCalendar.IsEnabled = false;
+            try {
+                id=int.Parse(eid.Text);
+            } catch (Exception ex) {
+                risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_id);
+                return;
+            }
+            if (enome.Text=="") {
+                risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_title);
+                return;
+            }
+            if (edescrizione.Text=="") {
+                risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_description);
+                return;
+             }
+            if (!WinDateCalc.maui.Platforms.Android.CalendarHelperService.Set(id, enome.Text, edescrizione.Text, data.Date))
+                risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.calendar_error);
+            else
+                risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.inserted_into_calendar);
+#endif
     }
 
 }

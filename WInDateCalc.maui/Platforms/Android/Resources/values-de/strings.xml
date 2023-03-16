@@ -10,4 +10,13 @@
 	<string name="informations">Information</string>
 	<string name="there_are">Noch</string>
 	<string name="days_left">Tage</string>
+	<string name="invalid_id">Ungültige ID</string>
+	<string name="invalid_description">Ungültige Beschreibung</string>
+	<string name="invalid_title">Ungültiger Titel</string>
+	<string name="inserted_into_calendar">In Kalender eingefügt</string>
+	<string name="calendar_error">Fehler beim Einfügen. Wahrscheinlich fehlt der App der Schreibzugriff</string>
+	<string name="lblid">ID: </string>
+	<string name="lblname">Name: </string>
+	<string name="lbldescription">Beschreibung: </string>
+	<string name="btncalendar">In Kalender einfügen</string>
 </resources>
