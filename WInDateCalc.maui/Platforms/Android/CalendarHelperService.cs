@@ -10,9 +10,9 @@ namespace WinDateCalc.maui.Platforms.Android
 {
     public class CalendarHelperService
     {
-        public static bool Set(int id, String nome, String descrizione, DateTime d)
+        public static bool Set(String nome, String descrizione, DateTime d)
         {
-            return MainActivity.Instance.calendarHelper(id, nome, descrizione, d);
+            return MainActivity.Instance.calendarHelper(nome, descrizione, d);
         }
     }
 }

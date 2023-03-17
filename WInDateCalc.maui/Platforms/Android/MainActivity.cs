@@ -24,7 +24,7 @@ public class MainActivity : MauiAppCompatActivity
         base.OnCreate(savedInstanceState);
         Instance = this;
     }
-    public bool calendarHelper(int id, string nome, string descrizione, DateTime d)
+    public bool calendarHelper(string nome, string descrizione, DateTime d)
     {
         long startMillis = 0;
         long endMillis = 0;
@@ -38,7 +38,7 @@ public class MainActivity : MauiAppCompatActivity
 
         ContentResolver cr = ContentResolver;
         ContentValues values = new ContentValues();
-        values.Put(Reminders.InterfaceConsts.Id, id);
+        values.Put(Reminders.InterfaceConsts.HasAlarm, true);
         values.Put(Reminders.InterfaceConsts.Dtstart, startMillis);
         values.Put(Reminders.InterfaceConsts.Dtend, endMillis);
         values.Put(Reminders.InterfaceConsts.Title, nome);

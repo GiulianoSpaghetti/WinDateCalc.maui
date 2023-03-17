@@ -10,13 +10,11 @@
 	<string name="informations">Informazioni</string>
 	<string name="there_are">Mancano</string>
 	<string name="days_left">giorni</string>
-	<string name="invalid_id">ID non valido</string>
 	<string name="invalid_description">Descrizione non valida</string>
 	<string name="invalid_title">Titolo non valido</string>
 	<string name="inserted_into_calendar">Inserito nel calendario</string>
 	<string name="calendar_error">Errore durante l\'inserimento. Probabilmente all\'app manca l\'accesso in scrittura</string>
-	<string name="lblid">Id: </string>
-	<string name="lblname">Nome: </string>
+	<string name="lblname">TItolo: </string>
 	<string name="lbldescription">Descrizione: </string>
 	<string name="btncalendar">Inserisci nel calendario</string>
 </resources>

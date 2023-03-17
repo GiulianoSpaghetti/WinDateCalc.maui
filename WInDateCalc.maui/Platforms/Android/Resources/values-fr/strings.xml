@@ -10,13 +10,11 @@
 	<string name="informations">Information</string>
 	<string name="there_are"></string>
 	<string name="days_left">jours pour aller</string>
-	<string name="invalid_id">Identifiant invalide</string>
 	<string name="invalid_description">Description invalide</string>
 	<string name="invalid_title">Titre invalide</string>
 	<string name="inserted_into_calendar">Inséré dans le calendrier</string>
 	<string name="calendar_error">Erreur lors de l\'insertion. Il manque probablement l\'accès en écriture à l\'application</string>
-	<string name="lblid">Identifiant : </string>
-	<string name="lblname">Nom : </string>
+	<string name="lblname">Titre: </string>
 	<string name="lbldescription">Description : </string>
 	<string name="btncalendar">Insérer dans le calendrier</string>
 </resources>

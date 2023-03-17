@@ -10,13 +10,11 @@
 	<string name="informations">Informations</string>
 	<string name="there_are">There are</string>
 	<string name="days_left">days left</string>
-	<string name="invalid_id">Invalid id</string>
 	<string name="invalid_description">Invalid description</string>
 	<string name="invalid_title">Invalid title</string>
 	<string name="inserted_into_calendar">Inserted into calendar</string>
 	<string name="calendar_error">Error inserting. Probably the app is missing write access</string>
-	<string name="lblid">Id: </string>
-	<string name="lblname">Name: </string>
+	<string name="lblname">Title: </string>
 	<string name="lbldescription">Description: </string>
 	<string name="btncalendar">Insert into calendar</string>
 </resources>
