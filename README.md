@@ -15,6 +15,10 @@ https://learn.microsoft.com/en-us/answers/questions/1140999/how-can-i-access-cal
 
 https://developer.android.com/guide/topics/providers/calendar-provider#manifest
 
+https://stackoverflow.com/questions/2556495/how-can-you-get-an-android-users-email-address
+
+https://github.com/TheAlmightyBob/Calendars/blob/master/Calendars/Calendars.Plugin.Android/CalendarsImplementation.cs
+
 
 # Donazioni
 
