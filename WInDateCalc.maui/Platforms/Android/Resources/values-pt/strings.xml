@@ -17,4 +17,5 @@
 	<string name="lblname">Título: </string>
 	<string name="lbldescription">Descrição: </string>
 	<string name="btncalendar">Inserir no calendário</string>
+	<string name="calendar_not_created">Não foi possível criar o calendário</string>
 </resources>

@@ -25,7 +25,6 @@ public partial class MainPage : ContentPage
         lblnome.Text=App.GetResource(WinDateCalc.maui.Resource.String.lblname);
         lbldescrizione.Text=App.GetResource(WinDateCalc.maui.Resource.String.lbldescription);
         btnCalendar.Text=App.GetResource(WinDateCalc.maui.Resource.String.btncalendar);
-        btnCalendar.IsVisible = true;
         btnCalendar.IsEnabled = false;
 #else
         Title = "Application";
@@ -74,6 +73,15 @@ public partial class MainPage : ContentPage
 #if ANDROID 
             risultato.Text="";
             btnCalendar.IsEnabled = false;
+            if (cal==0) {
+                cal=WinDateCalc.maui.Platforms.Android.CalendarHelperService.CreateCalendar();
+                if (cal==0) {
+                   risultato.Text=App.GetResource(Resource.String.calendar_not_created);
+                   btnCalendar.IsVisible = false;
+                   return;
+                }
+                Preferences.Set("calendar", cal);
+            }
             if (enome.Text=="") {
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_title);
                 return;
@@ -82,13 +90,6 @@ public partial class MainPage : ContentPage
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_description);
                 return;
              }
-            if (cal==0)
-                cal=WinDateCalc.maui.Platforms.Android.CalendarHelperService.CreateCalendar();
-            if (cal==0) {
-               risultato.Text=App.GetResource("Errore nel creare il calendario, forse mancano i permessi.");
-               return
-            }
-            Preferences.Set("calendar", cal);
             if (!WinDateCalc.maui.Platforms.Android.CalendarHelperService.Set(cal, enome.Text, edescrizione.Text, data.Date))
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.calendar_error);
             else

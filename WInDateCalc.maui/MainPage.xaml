@@ -37,7 +37,7 @@
             <Label Text="" x:Name="ldate"  Grid.Column="0" Grid.Row="2" />
             <DatePicker x:Name="data" Grid.Row="2" Grid.Column="1"  TextColor="White" />
             <Button Text="Calcola" x:Name="bok"  Clicked="calcola_Click" Grid.Row="3" Grid.Column="1" Opacity="0.5" />
-            <Button Text="Inserisci nel calendario" x:Name="btnCalendar" IsVisible="false" Clicked="OnCalendar_Click" Grid.Row="3" Grid.Column="0" Opacity ="0.5" />
+            <Button Text="Inserisci nel calendario" x:Name="btnCalendar" Clicked="OnCalendar_Click" Grid.Row="3" Grid.Column="0" Opacity ="0.5" />
             <Label x:Name="risultato" Text=""  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
         </Grid>
     </ContentPage.Content>
