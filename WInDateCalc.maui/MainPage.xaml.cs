@@ -78,7 +78,11 @@ public partial class MainPage : ContentPage
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_description);
                 return;
              }
-            if (!WinDateCalc.maui.Platforms.Android.CalendarHelperService.Set(enome.Text, edescrizione.Text, data.Date))
+            long cal= Preferences.Get("calendar", 0L);
+            if (cal==0)
+                cal=WinDateCalc.maui.Platforms.Android.CalendarHelperService.CreateCalendar();
+            Preferences.Set("calendar", cal);
+            if (!WinDateCalc.maui.Platforms.Android.CalendarHelperService.Set(cal, enome.Text, edescrizione.Text, data.Date))
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.calendar_error);
             else
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.inserted_into_calendar);
