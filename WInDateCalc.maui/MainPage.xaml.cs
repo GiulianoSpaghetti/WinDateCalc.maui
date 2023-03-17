@@ -1,6 +1,8 @@
 ﻿namespace WinDateCalc.maui;
 public partial class MainPage : ContentPage
+
 {
+    private long cal;
     public MainPage()
     {
         InitializeComponent();
@@ -14,7 +16,9 @@ public partial class MainPage : ContentPage
             {
                 Preferences.Clear();
             }
+
 #if ANDROID
+        cal = Preferences.Get("calendar", 0L);
         Title=App.GetResource(WinDateCalc.maui.Resource.String.application);
         ldate.Text = App.GetResource(WinDateCalc.maui.Resource.String.insert_the_date);
         bok.Text=App.GetResource(WinDateCalc.maui.Resource.String.calculate);
@@ -78,9 +82,12 @@ public partial class MainPage : ContentPage
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.invalid_description);
                 return;
              }
-            long cal= Preferences.Get("calendar", 0L);
             if (cal==0)
                 cal=WinDateCalc.maui.Platforms.Android.CalendarHelperService.CreateCalendar();
+            if (cal==0) {
+               risultato.Text=App.GetResource("Errore nel creare il calendario, forse mancano i permessi.");
+               return
+            }
             Preferences.Set("calendar", cal);
             if (!WinDateCalc.maui.Platforms.Android.CalendarHelperService.Set(cal, enome.Text, edescrizione.Text, data.Date))
                 risultato.Text=App.GetResource(WinDateCalc.maui.Resource.String.calendar_error);
