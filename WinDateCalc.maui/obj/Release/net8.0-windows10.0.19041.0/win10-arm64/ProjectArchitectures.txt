@@ -1,0 +1,1 @@
+C:\Users\numer\source\repos\WinDateCalc.maui\WinDateCalc.maui\WinDateCalc.maui.csproj;arm64

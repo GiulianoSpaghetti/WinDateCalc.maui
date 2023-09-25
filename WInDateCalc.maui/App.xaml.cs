@@ -1,19 +1,12 @@
-﻿namespace WinDateCalc.maui;
-
-public partial class App : Application
+﻿namespace WinDateCalc.maui
 {
-	public App()
-	{
-		InitializeComponent();
-
-		MainPage = new AppShell();
-	}
-#if ANDROID
-    public static System.String GetResource(int id)
+    public partial class App : Application
     {
-        return Android.App.Application.Context.Resources.GetString(id);
+        public App()
+        {
+            InitializeComponent();
 
+            MainPage = new AppShell();
+        }
     }
-#endif
-
 }
